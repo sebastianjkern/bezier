@@ -22,8 +22,8 @@ def bezier_curve_2d(t, points: list):
 
     # Quadratic bezier interpolation
     if degree == 2:
-        x = (1 - t) ** 2 * points[0][0] + 2 * (1 - t) * points[1][0] + t * points[2][0]
-        y = (1 - t) ** 2 * points[0][1] + 2 * (1 - t) * points[1][1] + t * points[2][1]
+        x = (1 - t) ** 2 * points[0][0] + 2 * (1 - t) * t * points[1][0] + t ** 2 * points[2][0]
+        y = (1 - t) ** 2 * points[0][1] + 2 * (1 - t) * t * points[1][1] + t ** 2 * points[2][1]
         return x, y
 
     # Cubic interpolation
@@ -45,7 +45,7 @@ def drange(x, y, jump):
         x += decimal.Decimal(jump)
 
 
-control_points = [[0, 0], [0.8, 0], [0.2, 1], [1, 1]]
+control_points = [[0, 0], [0.2, 0.8], [0.8, 0.2], [1, 1]]
 x_points = []
 y_points = []
 
