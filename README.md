@@ -1,4 +1,4 @@
-# bezier
+# Bezier
 Quick and simple implementation of the bezier interpolation algorithm
 
 ## Example
